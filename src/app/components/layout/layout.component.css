@@ -1,0 +1,27 @@
+.layout-container-col {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    /* background-color: yellow; */
+}
+
+.header{
+    height: 20%;
+    width: 100%;
+    background-color: rgb(253, 253, 253);
+    color: rgb(20, 20, 20);
+    font-size: 70px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content{
+    height: 80%;
+    width: 100%;
+    /* background-color: blue; */
+}

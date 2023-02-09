@@ -1,0 +1,52 @@
+<div class="page-container">
+  <div>
+    <button [routerLink]="'/'" class="btn">Back to Home Page</button>
+  </div>
+  <!-- <div *ngIf="character">
+    <div>{{ character["name"] }}</div>
+    <div>
+      <img [src]="character['image']" />
+    </div>
+    <div>{{ character["species"] }}</div>
+    <div>{{ character["status"] }}</div>
+    <div>
+      {{ character["location"]["name"] }}
+    </div>
+    <div>
+      {{ character["origin"]["name"] }}
+    </div>
+  </div> -->
+  <div class="character-card">
+    <div class="image-wrapper">
+      <img [src]="character['image']" />
+    </div>
+    <div class="details-wrapper">
+      <div class="title-wrapper">
+        <h3>{{ character["name"] }}</h3>
+        <div>
+          <span
+            [ngClass]="{
+              dead: character['status'] == 'Dead',
+              alive: character['status'] == 'Alive',
+              unknown: character['status'] == 'unknown'
+            }"
+          ></span>
+          <span>{{ character["status"] }}</span
+          ><span>-</span><span>{{ character["species"] }}</span>
+        </div>
+      </div>
+      <div class="text-wrapper">
+        <div>Last known location:</div>
+        <div>
+          {{ character["location"]["name"] }}
+        </div>
+      </div>
+      <div class="text-wrapper">
+        <div>Origin:</div>
+        <div>
+          {{ character["origin"]["name"] }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
