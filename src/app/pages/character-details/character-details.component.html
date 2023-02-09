@@ -16,7 +16,7 @@
       {{ character["origin"]["name"] }}
     </div>
   </div> -->
-  <div class="character-card">
+  <div class="character-card" *ngIf="character">
     <div class="image-wrapper">
       <img [src]="character['image']" />
     </div>
